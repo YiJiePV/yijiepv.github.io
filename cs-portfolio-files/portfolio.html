@@ -9,27 +9,116 @@
     </head>
     <body>
         <section class="cs-header">
-            <nav>
+            <nav class="navigation">
+                <a href="../index.html"><button class="btn">Karena's Portfolios</button></a>
                 <div class="nav-links" id="navLinks">
                     <ul>
                         <li><a href="cs-home.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="resume.html">RESUME</a></li>
-                        <li><a href="portfolio.html">PORTFOLIO</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="cs-home.html">ABOUT</a></li>
+                        <li><a href="cs-home.html">RESUME</a></li>
+                        <li><a href="cs-home.html">PROJECTS</a></li>
+                        <li><a href="cs-home.html">CONTACT</a></li>
                     </ul>
                 </div>
-                <div class="langs" id="langs">
+                <!--language options for later-->
+                <!--<div class="langs" id="langs">
                     <ul>
                         <li><a href="index.html">English</a></li>
                         <li><a href="chn.html" lang="zh-Hans">语言</a></li>
                     </ul>
-                </div>
-            </nav>  
+                </div>-->
+                
+            </nav>
+            <div class="header-text">
+                <h1>Welcome to</h1>
+                <br>
+                <h1 class="karena">Karena's Project Gallery</h1>
+                <!--Extra Quote for later-->
+                <!--<p>"quote pending"</p>
+                <p>-quote author pending</p>-->
+            </div>   
         </section>
         <!---- Portfolio Section ---->
-        <section class="portfolio">
-            <p>pending</p>
+        <section class="projects">
+            <h3 style="font-size: 35px; color: rgb(255, 162, 0);">Individual Projects:</h3>
+            <br>
+            <hr>
+            <h2 style="color:rgb(166, 8, 8);">COLLEGE: 2021-2024</h2>
+            <div class="row">
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/directed-weighted-graph-csharp"><img src="images/directed-graph.jpg" alt="a simple example of a directed graph"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=AwrO.yO1NMxlvBgAm.OJzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDSHJMd3JYMmRRc0NOM1F3aGluNlJjQQRuX3JzbHQDMARuX3N1Z2cDMwRvcmlnaW4DaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMwBHFzdHJsAzIzBHF1ZXJ5A2RpcmVjdGVkJTIwd2VpZ2h0ZWQlMjBncmFwaAR0X3N0bXADMTcwNzg4MTY3OQ--?p=directed+weighted+graph&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt&type=E210US885G0&imgl=pd#id=12&iurl=https%3A%2F%2Fyottagin.com%2Fwp-content%2Fuploads%2F2019%2F08%2Facd_weighted_graph.png&action=click">here</a></p>
+                    <h3><span>February 2023-March 2023</span><br>Directed Graph Library</h3>
+                    <p>A C# library I created during a CS course at Seattle Pacific University that includes and manipulates various aspects and traits of directed graph objects. I've also created a client menu program that displays all the methods and functionalities of the library.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/gale-shapley-algorithm-javascript"><img src="images/marriage.jpg" alt="married couple hands (awww)"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=AwrO_zOyOMxlxf8BJ1WJzbkF?p=stable+marriage+problem&type=E210US885G0&fr=mcafee&imgl=pd&fr2=p%3As%2Cv%3Ai#id=84&iurl=https%3A%2F%2Fp2.piqsels.com%2Fpreview%2F563%2F340%2F833%2Fheart-love-symbol-white.jpg&action=click">here</a></p>
+                    <h3><span>January 2023-February 2023</span><br>Gale-Shapley Matching Algorithm</h3>
+                    <p>A JavaScript program I created during a CS course at Seattle Pacific University that implements the Gale-Shapley algorithm to solve the "stable marriage" problem. This is the same algorithm I used in my previous Date Simulator program back from Bellevue College, expect it is more complete.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/prolog-circle-square"><img src="images/sphere-cube.png" alt="sphere in a cube"></a>
+                    <br>
+                    <h3><span>November 2022</span><br>Circles vs. Squares and Spheres vs. Cubes</h3>
+                    <p>A Prolog project I completed during a CS course at Seattle Pacific University whose main function is to calculate the relationships between given circles and squares. I also created a Prolog program that calculates the relationships between given spheres and cubes.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/square-circle-compiler"><img src="images/circle-square.png" alt="an intersecting circle and square"></a>
+                    <br>
+                    <h3><span>October 2022</span><br>Square-Circle Language Compiler</h3>
+                    <p>A Rust project I created during a CS course at Seattle Pacific University that compiles a program based on the "square-circle" BNF grammar and outputs it in either Scheme or Prolog.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/book-list-class-project"><img src="images/books.jpg" alt="books on a shelf"></a>
+                    <br>
+                    <h3><span>March 2022</span><br>Book List</h3>
+                    <p>A C++ project I completed during a CS course at Seattle Pacific University that creates and manipulates a linked list of books. I also created a C++ program that constructs a menu akin to a virtual bookstore.</p>
+                </div>
+            </div>
+            <h2 style="color:rgb(19, 43, 255);">RUNNING START (HIGH SCHOOL): 2019-2021</h2>
+            <div class="row">
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/grammer-check-class-project"><img src="images/bnf-grammar.jpg" alt="a snippet of a example BNF grammar"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=AwrjcBjOlZFj.4AEWpBXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZANMT0NVSTA1M18xBHNlYwNwaXZz?p=bnf+grammar+examples&fr2=piv-web&type=E210US885G91560&fr=mcafee#id=0&iurl=https%3A%2F%2Fimage.slideserve.com%2F71236%2Fform-of-bnf-rules-l.jpg&action=click">here</a></p>
+                    <h3><span>August 2021</span><br>Grammar Check</h3>
+                    <p>A Java program I completed during a programming course at Bellevue College that manipulates and uses a list of wacky BNF grammars to generate silly sentences.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/dating-simulator-class-project"><img src="images/couple2.jpg" alt="the siloette of a dating couple (ew)"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=Awr99e4OQXRjnxcGDgdXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZANMT0NVSTA1M18xBHNlYwNwaXZz?p=couple&fr2=piv-web&type=E210US885G91560&fr=mcafee#id=50&iurl=https%3A%2F%2F4kwallpapers.com%2Fimages%2Fwallpapers%2Fcouple-silhouette-sunset-backlit-seascape-yellow-dawn-beach-3840x5223-336.jpg&action=click">here</a></p>
+                    <h3><span>July 2021</span><br>Dating Simulator</h3>
+                    <p>A Java program I created during a programming course at Bellevue College that pairs up groups of men and women with each other based on the "stable marriage" CS problem.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/word-game-class-project"><img src="images/crosspuzzle.jpg" alt="a complicated crosspuzzle"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=AwrOrD21eZFjaccDKzlXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZANMT0NVSTA1M18xBHNlYwNwaXZz?p=crossword+puzzles&fr2=piv-web&type=E210US885G91560&fr=mcafee#id=5&iurl=https%3A%2F%2Fwww.thenorthernlight.com%2Fuploads%2Foriginal%2F20210203-151535-answers.tif.jpg&action=click">here</a></p>
+                    <h3><span>November 2019</span><br>Word Guessing Game</h3>
+                    <p>A C# program I created during a programming course at Bellevue College that runs a guessing game, in which a player has to guess a random word picked from a word bank.</p>
+                </div>
+            </div>
+            <br>
+            <h3 style="font-size: 35px; color: rgb(255, 162, 0);">Team Projects:</h3>
+            <br>
+            <hr>
+            <h2 style="color:rgb(166, 8, 8);">COLLEGE: 2021-2024</h2>
+            <div class="row">
+                <div class="project-col">
+                    <a href="https://github.com/tranleduyan/ETC-Backend"><img src="images/ETC-UI.png" alt="UI of the ETC app (Student/Faculty View)"></a>
+                    <br>
+                    <h3><span>September 2023-May 2024</span><br>ECS Tool Checkout (ETC)</h3>
+                    <p>This is the senior project that I am participating in as a member of a 5-person team to fulfill the last and final requirement of my Computer Science major. It is a web application with RFID components designed to assist the Engineering and Computer Science Lab Coordinater with monitoring and keeping record of lab equipment and provide students and faculty a streamlined reservation process. If successful, our project could potentially be adapted and put to good use by the ECS department. I was assigned as a back-end developer, and so I mainly worked on developing the backend and the middleware. I also did some work with the RFID hardware, mainly on the research side.</p>
+                </div>
+                <div class="project-col">
+                    <a href="https://github.com/YiJiePV/aes_implementation"><img src="images/encryption.jpg" alt="computer encryption"></a>
+                    <p>image source <a href="https://images.search.yahoo.com/search/images;_ylt=AwrjZHkqMcxlQKQBNz2JzbkF?p=encryption&type=E210US885G0&fr=mcafee&imgl=pd&fr2=p%3As%2Cv%3Ai#id=4&iurl=https%3A%2F%2Fcdn1.vogel.de%2FiNbU0X0rW4teRWhxmG8SK5wXLuo%3D%2F320x180%2Fsmart%2Ffilters%3Aformat(jpg)%3Aquality(80)%2Fimages.vogel.de%2Fvogelonline%2Fbdb%2F728400%2F728431%2Foriginal.jpg&action=click">here</a></p>
+                    <h3><span>February 2023</span><br>AES Encryption Implementation</h3>
+                    <p>A C++ program that I developed with another colleague that encrypts and decrypts files using the AES algorithm. This program provides a command line menu interface through which the user can interact with the AES algorithm and command it to either encrypt or decrypt a given file. I served as the project lead and the lead developer.</p>
+                </div>
+            </div>
+            <br>
         </section>
         <!---- Footer ---->
         <section class="footer">
