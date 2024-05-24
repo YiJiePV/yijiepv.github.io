@@ -202,12 +202,36 @@
     padding: 15px 0 25px;
     font-size: 20px;
 }
+button{
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 23px;
+    width: 150px;
+    transition-duration: 0.5s;
+    color: #000;
+    padding: 30px, 50px;
+}
+button:hover{
+    cursor: pointer;
+}
+.about-col button{
+    border: 3px solid rgb(186, 31, 238);
+}
+.about-col button:hover{
+    background-color: rgb(186, 31, 238);
+}
 /*resume*/
 .resume{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 100px;
+}
+.resume button{
+    border: 3px solid rgb(8, 124, 166);
+}
+.resume button:hover{
+    background-color: rgb(8, 124, 166);
 }
 h1{
     font-size: 55px;
@@ -306,6 +330,7 @@ h3{
 .projects{
     width: 80%;
     margin: auto;
+    margin-top: 70px;
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -315,18 +340,10 @@ h3{
     text-align: left;
 }
 .projects button{
-    background-color: #fff;
     border: 3px solid rgb(255, 162, 0);
-    border-radius: 10px;
-    font-size: 23px;
-    width: 150px;
-    transition-duration: 0.5s;
-    color: #000;
-    padding: 30px, 50px;
 }
 .projects button:hover{
     background-color: rgb(255, 162, 0);
-    cursor: pointer;
 }
 .project-col{
     flex-basis: 31%;
@@ -375,6 +392,9 @@ h3{
     font-weight: 600;
 }
 /*resume.html*/
+.resume-doctitle{
+    margin-top: 100px;
+}
 .pdf {
     width: 100%;
     aspect-ratio: 4 / 3;
