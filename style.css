@@ -77,7 +77,7 @@
     bottom: 40%;
     opacity: 1;
 }
-/*cs-home.html*/
+/*cs-home.html (& global)*/
 /*header*/
 .cs-header{
     min-height: 100vh;
@@ -277,6 +277,29 @@ h3{
     .flexbox-right {
         flex: 100%;
     }
+}
+/*footer*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+}
+.footer p{
+    font-size: 16px;
+    font-weight: 200;
+}
+.icons .fa{
+    color: plum;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 30px;
 }
 /*cs-home.html AND projects.html*/
 /*projects*/
