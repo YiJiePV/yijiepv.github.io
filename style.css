@@ -278,8 +278,8 @@ h3{
         flex: 100%;
     }
 }
+/*cs-home.html AND projects.html*/
 /*projects*/
-
 .projects{
     width: 80%;
     margin: auto;
@@ -331,4 +331,23 @@ h3{
 }
 .project-col h3 span{
     font-size: 15px;
+}
+/*about.html*/
+.about-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+    flex-basis: 65%;
+}
+.about-content img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.about-content h2{
+    text-align: center;
+    color: #222;
+    font-weight: 600;
 }
