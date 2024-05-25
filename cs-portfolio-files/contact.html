@@ -7,29 +7,88 @@
         <title>Karena Qian's Official Portfolio</title>
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/569801a9ad.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <section class="cs-header">
-            <nav>
+            <nav class="navigation">
+                <a href="../index.html"><button class="btn">Karena's Portfolios</button></a>
                 <div class="nav-links" id="navLinks">
                     <ul>
                         <li><a href="cs-home.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                         <li><a href="resume.html">RESUME</a></li>
-                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
                         <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
-                <div class="langs" id="langs">
+                <!--language options for later-->
+                <!--<div class="langs" id="langs">
                     <ul>
                         <li><a href="index.html">English</a></li>
                         <li><a href="chn.html" lang="zh-Hans">语言</a></li>
                     </ul>
-                </div>
-            </nav>  
+                </div>-->
+                
+            </nav>
+            <div class="header-text">
+                <h1>Welcome to</h1>
+                <br>
+                <h1 class="karena">Contact Information</h1>
+                <!--Extra Quote for later-->
+                <!--<p>"quote pending"</p>
+                <p>-quote author pending</p>-->
+            </div>   
         </section>
         <section class="contact-me">
-
+            <div class="contact-col">
+                <h2>How to find me:</h2>
+                <div>
+                    <a href="https://www.linkedin.com/in/karena-q-36bb67233/"><i class="fa fa-linkedin-square"></i></a>
+                    <span>
+                        <h5>https://www.linkedin.com/in/karena-q-36bb67233/</h5>
+                    </span>
+                </div>
+                <div>
+                    <a href="https://github.com/YiJiePV"><i class="fa fa-github-square"></i></a>
+                    <span>
+                        <h5>https://github.com/YiJiePV</h5>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-brands fa-discord"></i>
+                    <span>
+                        <h5>sonbla6118cmus</h5>
+                    </span>
+                </div>
+                <div>
+                    <a href="karenaqian@outlook.com"><i class="fa fa-envelope-o"></i></a>
+                    <span>
+                        <h5>karenaqian@outlook.com</h5>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <h2>Send me a message:</h2>
+                <div>
+                    <form action="https://submit-form.com/S1DuS5CH6">
+                        <input
+                            type="hidden"
+                            name="_redirect"
+                            value="https://yijiepv.github.io/cs-portfolio-files/contact.html"
+                        />
+                        <input type="text" id="name" name="name" placeholder="Name" required="" />
+                        <input type="email" id="email" name="email" placeholder="Email address" required="" />
+                        <textarea
+                          id="message"
+                          name="message"
+                          placeholder="Message"
+                          required=""
+                        ></textarea>
+                        <button type="submit">Send</button>
+                      </form>
+                </div>
+            </div>
         </section>
         <!---- Footer ---->
         <section class="footer">
