@@ -11,26 +11,33 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
         <script src="https://unpkg.com/jquery/dist/jquery.js"></script>
+        <script src="https://unpkg.com/@botpoison/browser" async></script>
         <script>
             $(() => {
                 $("#myButton").click(function(ev) {
-                    axios
-                    .post($("#formId").attr('action'), {
-                        name: $("#name").val(),
-                        email: $("#email").val(),
-                        message: $("#message").val(),
-                    })
-                    .then(function (response) {
-                        console.log(response);
-                    })
-                    .catch(function (response) {
-                        console.error(response);
+                    const botpoison = new Botpoison({
+                        publicKey: "pk_54e16238-7a23-4a6d-adc3-902a31acf96b",
                     });
-                    $(':input','#formId')
-                        .not(':button, :submit, :reset, :hidden')
-                        .val('')
-                        .prop('checked', false)
-                        .prop('selected', false);
+                    botpoison.challenge().then(({ solution }) => {
+                        axios
+                        .post($("#formId").attr('action'), {
+                            name: $("#name").val(),
+                            email: $("#email").val(),
+                            message: $("#message").val(),
+                            _botpoison: solution,
+                        })
+                        .then(function (response) {
+                            console.log(response);
+                            $(':input','#formId')
+                            .not(':button, :submit, :reset, :hidden')
+                            .val('')
+                            .prop('checked', false)
+                            .prop('selected', false);
+                        })
+                        .catch(function (response) {
+                            console.error(response);
+                        });
+                    });
                     return false;
                 });
             });
@@ -100,13 +107,13 @@
                 <div>
                     <form action="https://submit-form.com/S1DuS5CH6" id="formId">
                         <input type="hidden" name="_append" value="false" />
-                        <input type="text" id="name" name="name" placeholder="Name" required="" />
-                        <input type="email" id="email" name="email" placeholder="Email address" required="" />
+                        <input type="text" id="name" name="name" placeholder="Name" required/>
+                        <input type="email" id="email" name="email" placeholder="Email address" required/>
                         <textarea
                           id="message"
                           name="message"
                           placeholder="Message"
-                          required=""
+                          required
                         ></textarea>
                         <button type="submit" id="myButton" onclick="showPopup()">Send</button>
                     </form>
