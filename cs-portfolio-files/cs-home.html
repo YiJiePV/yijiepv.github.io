@@ -13,6 +13,7 @@
             <nav class="navigation">
                 <a href="../index.html"><button class="btn">Karena's Portfolios</button></a>
                 <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
                         <li><a href="cs-home.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
@@ -21,6 +22,7 @@
                         <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
                 <!--language options for later-->
                 <!--<div class="langs" id="langs">
                     <ul>
@@ -31,7 +33,7 @@
                 
             </nav>
             <div class="header-text">
-                <h1 class="glow-text">Hello World!</h1>
+                <h1 class="glow-text", id="hello">Hello World!</h1>
                 <br>
                 <h1 class="glow-text">Welcome to Karena Qian's<br>Official Computer Science Portfolio!</h1>
                 <!--Extra Quote for later-->
@@ -39,6 +41,18 @@
                 <p>-quote author pending</p>-->
             </div>   
         </section>
+        <script>
+            /*For toggling menu in phone resolution*/
+            var navLinks = document.getElementById("navLinks");
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
         <!---- About Section ---->
         <section class="about">
             <div class="row">
