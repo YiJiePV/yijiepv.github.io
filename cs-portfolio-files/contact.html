@@ -14,29 +14,65 @@
         <script src="https://unpkg.com/@botpoison/browser" async></script>
         <script>
             $(() => {
+                const validateEmail = (email) => {
+                    return email.match(
+                        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    );
+                };
+
+                function showSuccessPopup() {
+                    Swal.fire({
+                        title: "Submitted Successfully!",
+                        text: "Thank you so much for reaching out!",
+                        showCloseButton: true,
+                    });
+                };
+
+                function showErrorPopup() {
+                    Swal.fire({
+                        title: "Submission Failed!",
+                        text: "Something went wrong while sending your message. Feel free to reach out to karenaqian@outlook.com for ",
+                        showCloseButton: true,
+                    });
+                };
+
+                function showInvalidEmailPopup() {
+                    Swal.fire({
+                        title: "Submission Failed!",
+                        text: "You did not input a valid email address. Please try again.",
+                        showCloseButton: true,
+                    });
+                };
+
                 $("#myButton").click(function(ev) {
                     const botpoison = new Botpoison({
                         publicKey: "pk_54e16238-7a23-4a6d-adc3-902a31acf96b",
                     });
                     botpoison.challenge().then(({ solution }) => {
-                        axios
-                        .post($("#formId").attr('action'), {
-                            name: $("#name").val(),
-                            email: $("#email").val(),
-                            message: $("#message").val(),
-                            _botpoison: solution,
-                        })
-                        .then(function (response) {
-                            console.log(response);
-                            $(':input','#formId')
-                            .not(':button, :submit, :reset, :hidden')
-                            .val('')
-                            .prop('checked', false)
-                            .prop('selected', false);
-                        })
-                        .catch(function (response) {
-                            console.error(response);
-                        });
+                        if(validateEmail($("#email").val())){
+                            axios
+                            .post($("#formId").attr('action'), {
+                                name: $("#name").val(),
+                                email: $("#email").val(),
+                                message: $("#message").val(),
+                                _botpoison: solution,
+                            })
+                            .then(function (response) {
+                                $(':input','#formId')
+                                .not(':button, :submit, :reset, :hidden')
+                                .val('')
+                                .prop('checked', false)
+                                .prop('selected', false);
+                                showSuccessPopup();
+                            })
+                            .catch(function (response) {
+                                console.error(response);
+                                showErrorPopup();
+                            });
+                        }
+                        else{
+                            showInvalidEmailPopup();
+                        }
                     });
                     return false;
                 });
@@ -115,17 +151,8 @@
                           placeholder="Message"
                           required
                         ></textarea>
-                        <button type="submit" id="myButton" onclick="showPopup()">Send</button>
+                        <button type="submit" id="myButton">Send</button>
                     </form>
-                    <script>
-                        function showPopup() {
-                            Swal.fire({
-                                title: "Submitted Successfully!",
-                                text: "Thank you so much for reaching out!",
-                                showCloseButton: true,
-                            });
-                        }
-                    </script>
                 </div>
             </div>
         </section>
