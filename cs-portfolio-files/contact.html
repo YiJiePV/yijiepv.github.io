@@ -63,14 +63,17 @@
                                 .val('')
                                 .prop('checked', false)
                                 .prop('selected', false);
+                                document.getElementById("loader-wrapper").style.display = "none";
                                 showSuccessPopup();
                             })
                             .catch(function (response) {
                                 console.error(response);
+                                document.getElementById("loader-wrapper").style.display = "none";
                                 showErrorPopup();
                             });
                         }
                         else{
+                            document.getElementById("loader-wrapper").style.display = "none";
                             showInvalidEmailPopup();
                         }
                     });
@@ -134,7 +137,7 @@
             <div class="contact-col">
                 <h2>Send me a message:</h2>
                 <div>
-                    <form action="https://submit-form.com/S1DuS5CH6" id="formId">
+                    <form action="https://submit-form.com/l6WO40OIr" id="formId">
                         <input type="hidden" name="_append" value="false" />
                         <input type="text" id="name" name="name" placeholder="Name" required/>
                         <input type="email" id="email" name="email" placeholder="Email address" required/>
@@ -144,7 +147,7 @@
                           placeholder="Message"
                           required
                         ></textarea>
-                        <button type="submit" id="myButton">Send</button>
+                        <button type="submit" id="myButton" onclick="document.getElementById('loader-wrapper').style.display = 'block';">Send</button>
                     </form>
                 </div>
             </div>
@@ -160,4 +163,7 @@
             </div>
         </section>
     </body>
+    <div class="loader-wrapper" id="loader-wrapper" style="display: none">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 </html>
